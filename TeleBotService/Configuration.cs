@@ -8,7 +8,7 @@ namespace TeleBotService
 {
     public static class Configuration
     {
-        public readonly static string BotToken = "348411365:AAHhFV9WuRzzIgHyU9o-4BCdBGn83hyGp-A";
+        public readonly static string BotToken = "****";
 #if USE_PROXY
         public static class Proxy
         {
