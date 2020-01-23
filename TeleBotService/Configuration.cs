@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,7 +9,7 @@ namespace TeleBotService
 {
     public static class Configuration
     {
-        public readonly static string BotToken = "****";
+        public readonly static string BotToken = ConfigurationSettings.AppSettings["TelegramBot_Key"];
 #if USE_PROXY
         public static class Proxy
         {

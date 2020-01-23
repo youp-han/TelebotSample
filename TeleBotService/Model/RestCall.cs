@@ -1,5 +1,4 @@
 ﻿using RestSharp;
-using RestSharp.Authenticators;
 
 namespace TeleBotService.Model
 {
