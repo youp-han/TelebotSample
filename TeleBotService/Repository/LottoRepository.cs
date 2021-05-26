@@ -70,6 +70,31 @@ namespace TeleBotService.ControlCenter
             return success;
         }
 
+
+        public string GetRecommendedNumbers()
+        {
+            var result = ReceiveData("GetRecommendedNumbers");
+
+            JObject JData = JObject.Parse(result);
+            string success = JData["result"].ToString();
+
+            if (JData != null && JData["result"].ToString().Equals("success"))
+            {
+                JObject JsonData = JObject.Parse(JData["data"].ToString());
+
+                success = " 추천 당첨번호는 " + Environment.NewLine
+                                       + JsonData["num1"] + ", "
+                                       + JsonData["num2"] + ", "
+                                       + JsonData["num3"] + ", "
+                                       + JsonData["num4"] + ", "
+                                       + JsonData["num5"] + ", "
+                                       + JsonData["num6"] + ", 보너스 번호 "
+                                       + JsonData["bonus"] + " 입니다." + Environment.NewLine;
+            }
+
+            return success;
+        }
+
         private bool disposed = false;
         protected virtual void Dispose(bool disposing)
         {

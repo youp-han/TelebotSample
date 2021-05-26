@@ -11,6 +11,8 @@ namespace TeleBotService.Repository
         string GetLastestFirstPrice();
         string GetLastestLottNumber();
 
+        string GetRecommendedNumbers();
+
 
     }
 }

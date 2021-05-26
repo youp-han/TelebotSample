@@ -72,7 +72,7 @@ namespace TeleBotService
                             // second row
                             new []
                             {
-                                InlineKeyboardButton.WithCallbackData("이번주 번호추천", "이번주 번호추천"),
+                                InlineKeyboardButton.WithCallbackData("이번주번호추천", "이번주번호추천"),
                                 //InlineKeyboardButton.WithCallbackData("1등지점", "1등지점"),
 
                             }
@@ -123,6 +123,9 @@ namespace TeleBotService
                     break;
                 case "최신1등당첨금":
                     textMessage = LTRepository.GetLastestFirstPrice();
+                    break;
+                case "이번주번호추천":
+                    textMessage = LTRepository.GetRecommendedNumbers();
                     break;
                 default:
 
